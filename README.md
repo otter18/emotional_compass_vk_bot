@@ -5,3 +5,4 @@
   2. <code>pip3 install pandas</code>
   3. <code>pip3 install matplotlib</code>
   4. <code>pip3 install bs4</code>
+Перед запуском поместите свой vk-token в файл <code>config/token.txt</code>
