@@ -14,6 +14,7 @@ users = {}
 
 def main():
     # img dowloading
+    print('-' * 30, 'downloading imgs', '-' * 30)
     get_imgs()
     # auth
     # vk_session = vk_api.VkApi(token=open('config/token.txt', 'r').read())
@@ -23,8 +24,8 @@ def main():
     vk = vk_session.get_api()
     upload = VkUpload(vk_session)
 
-    print('\033[01m', 'bot started...', '\033[0m')
-    print('-' * 30)
+    print('-' * 30, 'bot started', '-' * 30)
+    
     # main loop
     for event in server.listen():
 
