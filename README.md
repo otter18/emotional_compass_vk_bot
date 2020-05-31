@@ -1,5 +1,6 @@
 # Эмоциональный компас 2 
 ![logo](img/logo.png)
+Это продолжение проекта с приложением на компьютер (https://github.com/otter18/compass-in-the-world-of-emotions)
 ### Игра-бот в ВК для развития эмоционального интеллекта
 - Чтобы запустить код необходимо установить библотеки:
   <code>pip3 install -r requirements.txt</code>
