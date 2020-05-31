@@ -15,8 +15,8 @@
      <td>Статистика по играм</td>
        </tr>
   <tr>
-    <td><img src="readme_img/1.jpg" width=270 height=480></td>
-    <td><img src="readme_img/2.jpg" width=270 height=480></td>
+    <td><img src="readme_img/1.jpg"></td>
+    <td><img src="readme_img/2.jpg"></td>
    
   </tr>
  </table>
