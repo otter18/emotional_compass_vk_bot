@@ -24,9 +24,9 @@ def get_imgs():
             f = open('img/' + df['ans'][i] + '.jpg', 'rb+')
             f.write(img)
             f.close()
-            print('\033[0;32m', df['ans'][i], ' - ok', '\033[0m')
+            print(df['ans'][i], ' - ok')
         except:
-            print('\033[0;31m', df['ans'][i], ' - error with', df['img'][i],  '\033[0m')
+            print(df['ans'][i], ' - error with', df['img'][i])
 
 
 def add_result(user_id, score):
