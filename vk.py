@@ -63,9 +63,9 @@ def main():
                 message=txt
             )
 
-            print('\033[01m', 'Username:', '\033[0m', get_user_name_from_vk_id(id))
-            print('\033[01m', 'User msg:', '\033[0m', msg)
-            print('\033[01m', 'Bot msg:', '\033[0m', txt, url)
+            print('Username:', get_user_name_from_vk_id(id))
+            print('User msg:', msg)
+            print('Bot msg:', txt, url)
             print('-' * 30)
 
 
