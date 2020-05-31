@@ -7,3 +7,11 @@
   - <code>pip3 install matplotlib</code>
   - <code>pip3 install bs4</code>
 - Пред запуском поместите свой vk-token в файл <code>config/token.txt</code>
+## Попробовать сыграть можно <a href="https://vk.com/emotional_compass">тут</a>
+<details>
+  <summary>Полная ссылка</summary>
+
+  
+  https://vk.com/emotional_compass
+  
+</details>
