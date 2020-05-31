@@ -5,11 +5,18 @@
   <code>pip3 install -r requirements.txt</code>
  
 - Пред запуском поместите свой vk-token в файл <code>config/token.txt</code>
-## Попробовать сыграть можно <a href="https://vk.com/emotional_compass">тут</a>
-<details>
-  <summary>Полная ссылка</summary>
+## Попробовать сыграть можно <a href="https://vk.com/emotional_compass">тут</a> (https://vk.com/emotional_compass)
+## Скриншоты
 
-  
-  https://vk.com/emotional_compass
-  
-</details>
+
+<table>
+  <tr>
+    <td>Ход Игры</td>
+     <td>Статистика по играм</td>
+       </tr>
+  <tr>
+    <td><img src="readme_img/1.jpg" width=270 height=480></td>
+    <td><img src="readme_img/2.jpg" width=270 height=480></td>
+   
+  </tr>
+ </table>
