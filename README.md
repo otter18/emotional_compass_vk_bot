@@ -1,4 +1,4 @@
-# Эмоциональный компас 2 (<a href='https://github.com/otter18/compass-in-the-world-of-emotions'>сслыка на версия 1</a>)
+# Эмоциональный компас 2 (<a href='https://github.com/otter18/compass-in-the-world-of-emotions'>сслыка на версию 1</a>)
 ### Cыграть можно <a href="https://vk.com/emotional_compass">тут</a> (https://vk.com/emotional_compass)
 ![logo](img/logo.png)
 - В нашей жизни эмоциональный интеллект проявляется как способность чувствовать свои эмоции, уметь ими управлять, понимать эмоции других людей.
