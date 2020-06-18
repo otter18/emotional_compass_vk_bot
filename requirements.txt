@@ -3,4 +3,3 @@ pandas
 matplotlib
 bs4
 flask
-json
