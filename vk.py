@@ -66,7 +66,7 @@ def main(data):
 
 @server.route('/vk-bot', methods=['POST'])
 def getMessage():
-    data = json.loads(request.body)
+    data = json.loads(request.stream.read().decode("utf-8"))
     if data['secret'] == os.environ.get('secret'):
         if data['type'] == 'confirmation':
             return os.environ.get('confirmation_token'), 200
