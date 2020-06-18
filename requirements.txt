@@ -2,3 +2,5 @@ vk_api
 pandas
 matplotlib
 bs4
+flask
+json
