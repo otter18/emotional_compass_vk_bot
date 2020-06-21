@@ -1,1 +1,1 @@
-web: python3 vk.py
+worker: python3 vk.py
