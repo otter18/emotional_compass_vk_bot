@@ -1,1 +1,1 @@
-web: python3 vk.py
+web: gunicorn --bind 0.0.0.0:5000 wsgi:server
