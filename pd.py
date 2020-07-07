@@ -63,7 +63,7 @@ def get_user_name_from_vk_id(user_id):
 
     user_name = _clean_all_tag_from_str(bs.findAll("title")[0])
 
-    return user_name
+    return user_name.split("|")[0]
 
 
 def _clean_all_tag_from_str(string_line):
