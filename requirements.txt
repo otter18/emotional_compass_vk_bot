@@ -3,3 +3,4 @@ pandas
 matplotlib
 bs4
 flask
+gunicorn
