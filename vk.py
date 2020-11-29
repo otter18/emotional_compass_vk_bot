@@ -13,9 +13,10 @@ users = {}
 
 
 def main():
-    # img dowloading
-    print('-' * 30, 'downloading imgs', '-' * 30)
-    get_imgs()
+    if os.environ.get('RELOAD_IMG'):
+        # img dowloading
+        print('-' * 30, 'downloading imgs', '-' * 30)
+        get_imgs()
     # auth
     # vk_session = vk_api.VkApi(token=open('config/token.txt', 'r').read())
     vk_session = vk_api.VkApi(token=os.environ.get('VK_TOKEN', open('config/token.txt', 'r').read()))
