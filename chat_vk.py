@@ -22,7 +22,7 @@ class Chat:
         if message == '📊 История игр':
             get_history(user_id)
             self.url = ['start']
-            return 'Вот история твоих игр', [[{'txt': '⏪ Выход', 'color': VkKeyboardColor.DEFAULT}]], str(user_id)
+            return 'Вот история твоих игр', [[{'txt': '⏪ Выход', 'color': VkKeyboardColor.SECONDARY}]], str(user_id)
         if self.url == ['start'] or message == '/start':
 
             self.__init__()
@@ -32,7 +32,7 @@ class Chat:
             self.sequence = list(range(len(self.data['img'])))
             shuffle(self.sequence)
             self.url = ['main']
-            return '👋Привет! Давай сыграем. Буду показывать эмоцию, а ты угадай, какую именно.', [[{'txt': '▶️ Начать игру', 'color': VkKeyboardColor.DEFAULT}], [{'txt': '📊 История игр', 'color': VkKeyboardColor.DEFAULT}]], None
+            return '👋Привет! Давай сыграем. Буду показывать эмоцию, а ты угадай, какую именно.', [[{'txt': '▶️ Начать игру', 'color': VkKeyboardColor.SECONDARY}], [{'txt': '📊 История игр', 'color': VkKeyboardColor.SECONDARY}]], None
 
         if self.url == ['set name']:
             self.url = ['set name', 'save']
@@ -40,7 +40,7 @@ class Chat:
         if message == "🚫 Закончить игру":
             self.url = ["start"]
             add_result(user_id, int(self.score / (len(self.sequence) * 3) * 100))
-            return '📌 Твой результат: ' + str(int(self.score / (len(self.sequence) * 3) * 100)) + "%.", [[{'txt': '📊 История игр', 'color': VkKeyboardColor.DEFAULT}], [{'txt': '⏩ В главное меню', 'color': VkKeyboardColor.DEFAULT}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
+            return '📌 Твой результат: ' + str(int(self.score / (len(self.sequence) * 3) * 100)) + "%.", [[{'txt': '📊 История игр', 'color': VkKeyboardColor.SECONDARY}], [{'txt': '⏩ В главное меню', 'color': VkKeyboardColor.SECONDARY}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
         if self.url == ['set name', 'save']:
             self.name = message
             self.url = ['main']
@@ -59,9 +59,9 @@ class Chat:
                     shuffle(temp2)
 
                     for i in range(0, len(temp2) - 1, 2):
-                        bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.DEFAULT},
-                                 {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.DEFAULT}]]
-                    bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.DEFAULT}]]
+                        bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.SECONDARY},
+                                 {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.SECONDARY}]]
+                    bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.SECONDARY}]]
                     self.bnt = bnt
                     self.url = ['main', 'check']
                     self.hint = 0
@@ -70,8 +70,8 @@ class Chat:
                 self.url = ['start']
                 add_result(user_id, int(self.score / (len(self.sequence) * 3) * 100))
                 return '📌 Твой результат: ' + str(int(self.score / (len(self.sequence) * 3) * 100)) + "%.", [
-                    [{'txt': '📊 История игр', 'color': VkKeyboardColor.DEFAULT}], [{'txt': '⏩ В главное меню',
-                                                                                     'color': VkKeyboardColor.DEFAULT}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
+                    [{'txt': '📊 История игр', 'color': VkKeyboardColor.SECONDARY}], [{'txt': '⏩ В главное меню',
+                                                                                     'color': VkKeyboardColor.SECONDARY}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
 
             else:
                 if self.hint < 2:
@@ -92,9 +92,9 @@ class Chat:
                 temp2 = [self.data['ans'][self.sequence[self.now]]] + temp[-3:]
                 shuffle(temp2)
                 for i in range(0, len(temp2) - 1, 2):
-                    bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.DEFAULT},
-                             {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.DEFAULT}]]
-                bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.DEFAULT}]]
+                    bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.SECONDARY},
+                             {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.SECONDARY}]]
+                bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.SECONDARY}]]
                 self.bnt = bnt
                 self.url = ['main', 'check']
                 self.hint = 0
@@ -104,8 +104,8 @@ class Chat:
                 self.url = ['start']
                 add_result(user_id, int(self.score / (len(self.sequence) * 3) * 100))
                 return '📌 Твой результат: ' + str(int(self.score / (len(self.sequence) * 3) * 100)) + "%.", [
-                    [{'txt': '📊 История игр', 'color': VkKeyboardColor.DEFAULT}], [{'txt': '⏩ В главное меню',
-                                                                                     'color': VkKeyboardColor.DEFAULT}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
+                    [{'txt': '📊 История игр', 'color': VkKeyboardColor.SECONDARY}], [{'txt': '⏩ В главное меню',
+                                                                                     'color': VkKeyboardColor.SECONDARY}]], None  # str(self.name) + ': ' + str(self.score) + ' из ' + str(len(self.sequence) * 3) + '(not fully)'
 
         if self.url == ['main']:
             bnt = []
@@ -115,9 +115,9 @@ class Chat:
             temp2 = [self.data['ans'][self.sequence[self.now]]] + temp[-3:]
             shuffle(temp2)
             for i in range(0, len(temp2) - 1, 2):
-                bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.DEFAULT},
-                         {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.DEFAULT}]]
-            bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.DEFAULT}]]
+                bnt += [[{'txt': str(temp2[i]), 'color': VkKeyboardColor.SECONDARY},
+                         {'txt': str(temp2[i + 1]), 'color': VkKeyboardColor.SECONDARY}]]
+            bnt += [[{'txt': '🚫 Закончить игру', 'color': VkKeyboardColor.SECONDARY}]]
             self.bnt = bnt
             self.url = ['main', 'check']
             return str(self.now + 1) + ') ' + self.name + ", какую эмоцию испытывает человек на картинке❓", bnt, str(self.data['ans'][self.sequence[self.now]])
