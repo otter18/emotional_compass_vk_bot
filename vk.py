@@ -16,7 +16,7 @@ vk_session = vk_api.VkApi(token=os.environ['VK_TOKEN'])
 vk = vk_session.get_api()
 upload = VkUpload(vk_session)
 
-if os.environ.get('RELOAD_IMG', False):
+if os.environ.get('RELOAD_IMG', False) == "True":
     # img dowloading
     print('-' * 30, 'downloading imgs', '-' * 30)
     get_imgs()
