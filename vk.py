@@ -16,10 +16,11 @@ vk_session = vk_api.VkApi(token=os.environ['VK_TOKEN'])
 vk = vk_session.get_api()
 upload = VkUpload(vk_session)
 
-# img dowloading
-print('-' * 30, 'downloading imgs', '-' * 30)
-get_imgs()
-print('-' * 30, 'bot started', '-' * 30)
+if os.environ.get('RELOAD_IMG', False):
+    # img dowloading
+    print('-' * 30, 'downloading imgs', '-' * 30)
+    get_imgs()
+    print('-' * 30, 'bot started', '-' * 30)
 
 
 def main(data):
